@@ -1,4 +1,4 @@
-=== Welcome to Fat Free CRM!
+=== Welcome to D.a.Pcrm!
 
 Fat Free CRM is next generation open source CRM platform. Active development
 has started in November 2008; new features, enhancements, and updates appear
@@ -6,29 +6,19 @@ on daily basis.
 
 Here are the steps to get Fat Free CRM up and running on your system.
 
+This is a branch of the official Fat Free CRM that is being used by the HybridGroup
+as their CRM on Heroku. 
 
 === System Requirements
 
-* Ruby v1.8.6, v1.8.7, or v1.9.1
-* Ruby on Rails v2.3.4 (works with 2.3.2 and 2.3.3)
+* Ruby v1.8.6, v1.8.7, or v1.9.1 
+* Ruby on Rails v2.3.5
 * MySQL v4.1.1 or later (v5+ is recommended) or SQLite v3.4 or later
 * ImageMagick (optional, only if you would like to use avatars)
 
-=== Downloads
+=== Deployment
 
-* Git source code repository: git://github.com/michaeldv/fat_free_crm.git
-* .zip or .tgz archives: http://github.com/michaeldv/fat_free_crm/downloads
-
-=== Resources
-
-* Home page: http://www.fatfreecrm.com
-* Online demo: http://demo.fatfreecrm.com
-* Project page: http://github.com/michaeldv/fat_free_crm/tree/master
-* Features and bugs: http://fatfreecrm.lighthouseapp.com
-* Twitter commit updates: http://twitter.com/fatfreecrm
-* Discussion group for users: http://groups.google.com/group/fat-free-crm-users
-* Discussion group for developers: http://groups.google.com/group/fat-free-crm-dev
-* IRC channel: #fatfreecrm on irc.freenode.net
+* Heroku
 
 === Setting Up The Database
 
@@ -37,7 +27,7 @@ two sample database configuration files: +config+/+database+.+mysql+.+yml+
 for MySQL and +config+/+database+.+sqlite+.+yml+ for SQLite. Based on your choice
 of the database create the actual database configuration file, for example:
 
-   $ cp config/database.mysql.yml config/database.yml
+   $ cp config/database.sqlite.yml config/database.yml
 
 Edit config/database.yml and specify database names and authentication
 details. Once you have database configuration file ready run rake to create
@@ -54,8 +44,36 @@ following rake task:
 
    $ rake crm:setup
 
+=== Running The App
 
-=== Loading Demo Data
+Now you should be able to launch the Rails server and point your web browser
+to http://localhost:3000
+
+   $ ruby script/server
+
+=== Deployment to Heroku
+
+Since Heroku's rake doesn't support data inputs, we'll have to generate a clean database
+first locally. Then push the database to Heroku before running the code. Here is the series
+of commands if you have not already run them.
+
+   $ heroku create
+   $ script/plugin install git://github.com/mooktakim/heroku_sass_and_cache.git
+   
+Read the documentation for the plugin, but you’ll need to add this to config/routes.rb:
+   map.heroku_sass_and_cache
+    
+   $ git add .
+   $ git commit -m "feeling sassy"
+   $ git push heroku master
+   $ heroku db:push
+
+For the last command, I assume you've already set up the heroku remote repository with
+git.
+
+NOTE: Addition of the Sendgrid add-on or equivalent is required for the emails to go off.
+
+=== Loading Demo Data (if wating to test drive the app)
 
 You can test drive Fat Free CRM by loading sample records that are generated
 on the fly mimic the actual use. IMPORTANT: loading demo will delete all the
@@ -72,14 +90,12 @@ You can reset the database and reload demo data at any time by using:
 
    $ rake crm:demo:reload
 
+==== Added by HybridGroup
 
-=== Running The App
+tasks/cron.rake
 
-Now you should be able to launch the Rails server and point your web browser
-to http://localhost:3000
-
-   $ ruby script/server
-
+app/models/notifier.rb : Notifier#new_leads_notification
+app/views/notifier/new_leads_notification.erb
 
 === For Developers
 
