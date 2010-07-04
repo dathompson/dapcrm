@@ -100,6 +100,7 @@ the concepts:
 === License
 
 Copyright (c) 2010 D.a. Productions LLC. All rights reserved.
+
 Copyright (c) 2008-2010 by Michael Dvorkin. All rights reserved.
 
 This program is free software: you can redistribute it and/or modify it
