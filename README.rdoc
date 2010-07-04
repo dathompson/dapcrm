@@ -6,6 +6,8 @@ DaPCRM is based off of Fat Free CRM, a next generation open source CRM platform.
 started in November 2008; new features, enhancements, and updates appear
 on daily basis.
 
+We have customized Fat Free CRM in order to be compatible with Heroku. You can checkout the heroku_FFC_base_0.1 branch if you would like to use our base Fat Free CRM install, which includes all the necessary base modifications to immediately deploy on heroku. This includes the heroku_sass_and_cache plugin allowing write access for haml/sass on Heroku's read-only cloud and some mod's to the routes.rb in order to accommodate that plugin.
+
 === Here are the steps to get Fat Free CRM up and running on your system.
 
 === System Requirements
@@ -58,15 +60,11 @@ Since Heroku's rake doesn't support data inputs, we'll have to generate a clean 
 first locally. Then push the database to Heroku before running the code. Here is the series
 of commands if you have not already run them.
 
-   $ heroku create
-   
-Read the documentation for the plugin, but you’ll need to add this to config/routes.rb:
-   map.heroku_sass_and_cache
-    
-   $ git add .
-   $ git commit -m "new DaPCRM"
-   $ git push heroku master
-   $ heroku db:push
+   $ heroku create                #creates the heroku app    
+   $ git add .                    #adds files to your git repository
+   $ git commit -m "new DaPCRM"   #commits files to your git repository
+   $ git push heroku master       #pushes commit to your heroku app
+   $ heroku db:push               #because heroku does not allow local db edits, you will need to push your db
 
 NOTE: Addition of the Sendgrid add-on or equivalent is required for the emails to go off.
 
