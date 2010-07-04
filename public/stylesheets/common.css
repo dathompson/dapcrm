@@ -1,6 +1,6 @@
 .title {
   border-bottom: 1px gray solid;
-  color: #342d7e;
+  color: #333333;
   font-size: 17px;
   font-weight: bold;
   padding-bottom: 2px; }
@@ -19,7 +19,7 @@
   font-size: 13px;
   font-weight: bold; }
   .subtitle a:link, .subtitle a:visited {
-    color: darkslateblue;
+    color: grey;
     text-decoration: none; }
   .subtitle a:hover {
     background: none; }
@@ -46,7 +46,6 @@
 
 .standalone {
   background: whitesmoke;
-  border: 20px lightsteelblue solid;
   margin: 75px auto 6px auto;
   padding: 20px;
   width: 400px;
@@ -88,9 +87,11 @@
   font-size: 10px;
   float: right;
   padding: 0px 0px 0px 4px; }
+  .tools#comment_new_tools {
+    margin: 8px 0px 0px 0px; }
 
 .label {
-  color: #3f3f3f;
+  color: #666666;
   font-size: 12px;
   margin: 8px 0px 0px 0px; }
 
@@ -98,7 +99,7 @@
   margin: 5px 0px 0px 0px; }
 
 .req {
-  color: navy; }
+  color: #333333; }
 
 .intro {
   color: dimgray;
@@ -107,7 +108,7 @@
 
 .section {
   background: whitesmoke;
-  color: #3f3f3f;
+  color: #0099ee;
   margin: 0px 0px 2px 0px;
   padding: 4px 15px 8px 15px; }
 
@@ -123,7 +124,7 @@
     border-left: 1px gainsboro solid;
     border-bottom: 1px grey solid;
     border-right: 1px grey solid;
-    color: navy;
+    color: #333333;
     cursor: pointer;
     height: 16px;
     margin: 3px;
@@ -197,10 +198,13 @@
 
 .comment {
   background: #f2f2f2;
+  border-bottom: 1px gainsboro solid;
   margin: 2px 0px 0px 0px;
   overflow: hidden;
   padding: 4px;
   list-style: none; }
+  .comment#comment_new {
+    margin: 3px 0px 0px 0px; }
   .comment input[type=text] {
     border: 1px #cfcfcf solid;
     color: grey;
@@ -226,6 +230,35 @@
   .comment dt {
     padding: 0px;
     margin: -10px 0px 0px 36px; }
+    .comment dt p {
+      margin: 10px 0px 0px 0px; }
+
+.mail {
+  background: #f2f2f2;
+  border-bottom: 1px gainsboro solid;
+  margin: 2px 0px 0px 0px;
+  overflow: hidden;
+  padding: 4px;
+  list-style: none; }
+  .mail .gravatar {
+    float: left;
+    margin: 3px 10px 3px 3px; }
+  .mail .subject {
+    color: black; }
+  .mail .body {
+    display: inline;
+    font-size: 11px; }
+  .mail tt {
+    font-size: 10px;
+    color: #666666; }
+  .mail dt {
+    padding: 0px;
+    margin: -10px 0px 0px 36px; }
+    .mail dt p {
+      margin: 10px 0px 0px 0px; }
+
+.toggle {
+  font-weight: normal; }
 
 #paginate {
   float: right;
@@ -310,7 +343,7 @@
   -webkit-box-shadow: 2px 2px 8px #bbb, -2px 0px 8px #bbb; }
 
 .filters h4 {
-  color: navy;
+  color: #333333;
   font-size: 12px;
   font-weight: bold; }
 .filters input[type=text] {
@@ -336,7 +369,7 @@
     border-bottom: none; }
 .panel .caption {
   border-bottom: 1px grey solid;
-  color: navy;
+  color: #333333;
   font-size: 12px;
   font-weight: bold;
   margin: 4px 0px 2px 0px;
@@ -355,7 +388,7 @@
   text-align: center; }
 
 .on {
-  background: lightgoldenrodyellow;
+  background: lightblue;
   border: 1px silver inset; }
 
 .off {

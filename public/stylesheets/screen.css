@@ -25,9 +25,9 @@ ul li {
 a {
   text-decoration: none; }
   a:link, a:visited {
-    color: #0033cc; }
+    color: #0099ee; }
   a:hover {
-    background: #0033cc;
+    background: #0099ee;
     color: white; }
   a img {
     background-color: white;
@@ -57,24 +57,24 @@ tt {
   font-size: 12px; }
 
 #header {
-  background: #1e4262;
-  color: skyblue;
-  padding: 8px 16px 8px 16px; }
+  background: white;
+  color: #0099ee;
+  padding: 18px 16px 18px 16px; }
   #header h3 a {
-    background: #1e4262;
-    color: greenyellow;
+    background: white;
+    color: #0099ee;
     font: normal 15px "Lucida Grande", Arial, Helvetica, sans-serif;
     text-decoration: none; }
   #header #welcome {
     float: right;
     font-size: 11px; }
     #header #welcome a {
-      color: lightyellow;
+      color: grey;
       padding: 1px 4px 2px 4px;
       text-decoration: none; }
       #header #welcome a:hover {
-        background: #1e4262;
-        color: yellow; }
+        background: white;
+        color: #0099ee; }
     #header #welcome a.selected {
       background: steelblue;
       color: lightyellow;
@@ -102,7 +102,7 @@ tt {
       margin: 2px 0px 0px 0px; }
 
 #tabs {
-  background: #1e4262;
+  background: white;
   height: 24px;
   padding: 0px;
   text-align: center;
@@ -114,7 +114,7 @@ tt {
     margin: 0px 4px 0px 16px;
     width: 80px; }
   #tabs a:link, #tabs a:visited {
-    background: #466bb1;
+    background: #aaaaaa;
     color: white;
     float: left;
     padding: 4px 8px 5px 8px;
@@ -127,10 +127,10 @@ tt {
     -webkit-border-top-right-radius: 3px; }
   #tabs a:hover {
     background: #97baff;
-    color: navy; }
+    color: white; }
   #tabs a:link.active, #tabs a:visited.active {
-    background: azure;
-    color: navy;
+    background: #e5e5e5;
+    color: #0099ee;
     text-decoration: none; }
 
 #footer {
@@ -140,7 +140,7 @@ tt {
 
 .title {
   border-bottom: 1px gray solid;
-  color: #342d7e;
+  color: #333333;
   font-size: 17px;
   font-weight: bold;
   padding-bottom: 2px; }
@@ -159,7 +159,7 @@ tt {
   font-size: 13px;
   font-weight: bold; }
   .subtitle a:link, .subtitle a:visited {
-    color: darkslateblue;
+    color: grey;
     text-decoration: none; }
   .subtitle a:hover {
     background: none; }
@@ -186,7 +186,6 @@ tt {
 
 .standalone {
   background: whitesmoke;
-  border: 20px lightsteelblue solid;
   margin: 75px auto 6px auto;
   padding: 20px;
   width: 400px;
@@ -228,9 +227,11 @@ tt {
   font-size: 10px;
   float: right;
   padding: 0px 0px 0px 4px; }
+  .tools#comment_new_tools {
+    margin: 8px 0px 0px 0px; }
 
 .label {
-  color: #3f3f3f;
+  color: #666666;
   font-size: 12px;
   margin: 8px 0px 0px 0px; }
 
@@ -238,7 +239,7 @@ tt {
   margin: 5px 0px 0px 0px; }
 
 .req {
-  color: navy; }
+  color: #333333; }
 
 .intro {
   color: dimgray;
@@ -247,7 +248,7 @@ tt {
 
 .section {
   background: whitesmoke;
-  color: #3f3f3f;
+  color: #0099ee;
   margin: 0px 0px 2px 0px;
   padding: 4px 15px 8px 15px; }
 
@@ -263,7 +264,7 @@ tt {
     border-left: 1px gainsboro solid;
     border-bottom: 1px grey solid;
     border-right: 1px grey solid;
-    color: navy;
+    color: #333333;
     cursor: pointer;
     height: 16px;
     margin: 3px;
@@ -337,10 +338,13 @@ tt {
 
 .comment {
   background: #f2f2f2;
+  border-bottom: 1px gainsboro solid;
   margin: 2px 0px 0px 0px;
   overflow: hidden;
   padding: 4px;
   list-style: none; }
+  .comment#comment_new {
+    margin: 3px 0px 0px 0px; }
   .comment input[type=text] {
     border: 1px #cfcfcf solid;
     color: grey;
@@ -366,6 +370,35 @@ tt {
   .comment dt {
     padding: 0px;
     margin: -10px 0px 0px 36px; }
+    .comment dt p {
+      margin: 10px 0px 0px 0px; }
+
+.mail {
+  background: #f2f2f2;
+  border-bottom: 1px gainsboro solid;
+  margin: 2px 0px 0px 0px;
+  overflow: hidden;
+  padding: 4px;
+  list-style: none; }
+  .mail .gravatar {
+    float: left;
+    margin: 3px 10px 3px 3px; }
+  .mail .subject {
+    color: black; }
+  .mail .body {
+    display: inline;
+    font-size: 11px; }
+  .mail tt {
+    font-size: 10px;
+    color: #666666; }
+  .mail dt {
+    padding: 0px;
+    margin: -10px 0px 0px 36px; }
+    .mail dt p {
+      margin: 10px 0px 0px 0px; }
+
+.toggle {
+  font-weight: normal; }
 
 #paginate {
   float: right;
@@ -450,7 +483,7 @@ tt {
   -webkit-box-shadow: 2px 2px 8px #bbb, -2px 0px 8px #bbb; }
 
 .filters h4 {
-  color: navy;
+  color: #333333;
   font-size: 12px;
   font-weight: bold; }
 .filters input[type=text] {
@@ -476,7 +509,7 @@ tt {
     border-bottom: none; }
 .panel .caption {
   border-bottom: 1px grey solid;
-  color: navy;
+  color: #333333;
   font-size: 12px;
   font-weight: bold;
   margin: 4px 0px 2px 0px;
@@ -495,7 +528,7 @@ tt {
   text-align: center; }
 
 .on {
-  background: lightgoldenrodyellow;
+  background: lightblue;
   border: 1px silver inset; }
 
 .off {
@@ -576,13 +609,13 @@ p.flash_warning, p.flash_error {
   margin: 0px;
   padding: 5px 0px 5px 16px; }
 p.flash_notice, p.flash_message {
-  background: #df9;
-  color: darkgreen;
+  background: #09e;
+  color: white;
   margin: 0px;
   padding: 5px 0px 5px 16px; }
 p.flash_exception {
-  background: #df9;
-  border: 5px limegreen solid;
+  background: #09e;
+  border: 5px #09e solid;
   font-size: 14px;
   margin: 50px auto;
   padding: 50px;

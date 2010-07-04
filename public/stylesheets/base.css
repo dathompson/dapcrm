@@ -25,9 +25,9 @@ ul li {
 a {
   text-decoration: none; }
   a:link, a:visited {
-    color: #0033cc; }
+    color: #0099ee; }
   a:hover {
-    background: #0033cc;
+    background: #0099ee;
     color: white; }
   a img {
     background-color: white;

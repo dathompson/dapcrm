@@ -15,8 +15,8 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //------------------------------------------------------------------------------
 
-!color_title    = #342d7e
-!color_subtitle = "darkslateblue"
+!color_title    = #333333
+!color_subtitle = "grey"
 !sidebar_width  = 210px
 
 // Common page elements.
@@ -76,7 +76,6 @@
 
 .standalone
   :background whitesmoke
-  :border 20px lightsteelblue solid
   :margin 75px auto 6px auto 
   :padding 20px
   :width 400px 
@@ -105,7 +104,7 @@
   :-webkit-box-shadow 2px 2px 8px #bbb, -2px 0px 8px #bbb
   
 .sidebar
-  :color #3f3f3f
+  :color #3f3f3f  
   :font-size 11px
   :padding 0px 12px 0px 0px
   :width = !sidebar_width
@@ -122,8 +121,11 @@
   :float right
   :padding 0px 0px 0px 4px
 
+  &#comment_new_tools
+    :margin 8px 0px 0px 0px
+
 .label
-  :color #3f3f3f
+  :color #666666
   :font-size 12px
   :margin 8px 0px 0px 0px
 
@@ -131,7 +133,7 @@
   :margin 5px 0px 0px 0px
 
 .req
-  :color navy
+  :color #333333
 
 .intro
   :color dimgray
@@ -140,7 +142,7 @@
 
 .section
   :background whitesmoke
-  :color #3f3f3f
+  :color #0099ee
   :margin 0px 0px 2px 0px
   :padding 4px 15px 8px 15px
 
@@ -157,7 +159,7 @@
       :left 1px gainsboro solid
       :bottom 1px grey solid
       :right 1px grey solid
-    :color navy
+    :color #333333
     :cursor pointer
     :height 16px
     :margin 3px
@@ -238,6 +240,7 @@
 
 .comment
   :background #f2f2f2
+  :border-bottom 1px gainsboro solid
   :margin 2px 0px 0px 0px
   :overflow hidden
   :padding 4px
@@ -248,6 +251,9 @@
   //  :-webkit-border-radius
   //    :bottom-left-radius 8px
   //    :bottom-right-radius 8px
+
+  &#comment_new
+    :margin 3px 0px 0px 0px
 
   input[type=text]
     :border 1px #cfcfcf solid
@@ -278,6 +284,41 @@
   dt
     :padding 0px
     :margin -10px 0px 0px 36px
+    p
+      :margin 10px 0px 0px 0px
+
+// Avoid collision with .email CSS class which is used to display Task category strip.
+.mail
+  :background #f2f2f2
+  :border-bottom 1px gainsboro solid
+  :margin 2px 0px 0px 0px
+  :overflow hidden
+  :padding 4px
+  :list-style none
+
+  .gravatar
+    :float left
+    :margin 3px 10px 3px 3px
+
+  .subject
+    :color black
+
+  .body
+    :display inline
+    :font-size 11px
+
+  tt
+    :font-size 10px
+    :color #666666
+
+  dt
+    :padding 0px
+    :margin -10px 0px 0px 36px
+    p
+      :margin 10px 0px 0px 0px
+
+.toggle
+  :font-weight normal
 
 #paginate
   :float right
@@ -377,7 +418,7 @@
 
 .filters
   h4
-    :color navy
+    :color #333333
     :font-size 12px
     :font-weight bold
   input[type=text]
@@ -405,7 +446,7 @@
 
   .caption
     :border-bottom 1px grey solid
-    :color navy
+    :color #333333
     :font
       :size 12px
       :weight bold
@@ -428,7 +469,7 @@
   :text-align center
 
 .on
-  :background lightgoldenrodyellow
+  :background lightblue
   :border 1px silver inset
 
 .off
