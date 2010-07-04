@@ -14,7 +14,7 @@ on daily basis.
 * Ruby on Rails v2.3.5
 * MySQL v4.1.1 or later (v5+ is recommended) or SQLite v3.4 or later
 * ImageMagick (optional, only if you would like to use avatars)
-* Git Version Control (use can use svn, but you will need git install in order to push your code/changes to Heroku)
+* Git Version Control (use can use svn, but you will need git installed on your machine in order to push your code/changes to Heroku)
 
 === Deployment
 
