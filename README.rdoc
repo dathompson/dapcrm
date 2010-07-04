@@ -1,4 +1,5 @@
 === Welcome to D.a.Pcrm!
+This is the base template for FFC on Heroku.
 
 Fat Free CRM is next generation open source CRM platform. Active development
 has started in November 2008; new features, enhancements, and updates appear
