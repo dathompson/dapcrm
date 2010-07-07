@@ -3,6 +3,7 @@ config/database.yml
 coverage/*
 db/schema.rb
 db/*.sql*
+dump*
 log/*.log
 tmp/**/*
 public/avatars/**/*
